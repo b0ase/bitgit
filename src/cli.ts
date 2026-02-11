@@ -56,10 +56,9 @@ async function main() {
     case '--help':
     case '-h':
     case undefined: {
-      console.log(`
-bit — Bitcoin CLI for the PATH Protocol
-
-Commands:
+      const { showBanner } = await import('./banner.js');
+      showBanner();
+      console.log(`Commands:
   bit init                Scaffold .bit.yaml for a new project
   bit push                git push + inscribe changed content on BSV
   bit register <domain>   Inscribe a domain on DNS-DEX
@@ -75,7 +74,7 @@ Examples:
   bit push --dry-run
   bit register kwegwong.com
   bit status
-`.trim());
+`);
       break;
     }
     case '--version': {
