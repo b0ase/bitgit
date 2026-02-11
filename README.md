@@ -123,4 +123,4 @@ Configure via `wallet.key_env` in `.bit.yaml` to use any env var name.
 
 ## License
 
-MIT
+[Open BSV License](./LICENSE) — free to use, modify, and distribute, but must only be used on BSV Blockchains.
