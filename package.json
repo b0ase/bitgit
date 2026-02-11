@@ -1,0 +1,54 @@
+{
+  "name": "bitgit",
+  "version": "0.1.0",
+  "description": "git push for Bitcoin — inscribe content, register domains, manage tokens on BSV",
+  "type": "module",
+  "bin": {
+    "bit": "./src/cli.ts"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "bitcoin",
+    "bsv",
+    "bitcoinsv",
+    "git",
+    "blockchain",
+    "inscription",
+    "op-return",
+    "cli",
+    "dns-dex",
+    "path402"
+  ],
+  "author": "b0ase <richard@b0ase.com> (https://b0ase.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b0ase/bitgit.git"
+  },
+  "homepage": "https://github.com/b0ase/bitgit#readme",
+  "bugs": {
+    "url": "https://github.com/b0ase/bitgit/issues"
+  },
+  "dependencies": {
+    "@bsv/sdk": "^1.1.23",
+    "@supabase/supabase-js": "^2.49.1",
+    "dotenv": "^16.4.7",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ]
+}
