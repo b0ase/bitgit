@@ -1,10 +1,10 @@
 {
   "name": "bitgit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "git push for Bitcoin — inscribe content, register domains, manage tokens on BSV",
   "type": "module",
   "bin": {
-    "bit": "./src/cli.ts"
+    "bit": "./bin/bit.js"
   },
   "scripts": {
     "dev": "tsx src/cli.ts",
@@ -36,17 +36,18 @@
     "@bsv/sdk": "^1.1.23",
     "@supabase/supabase-js": "^2.49.1",
     "dotenv": "^16.4.7",
+    "tsx": "^4.19.2",
     "yaml": "^2.7.0"
   },
   "devDependencies": {
     "@types/node": "^22.12.0",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   },
   "engines": {
     "node": ">=20"
   },
   "files": [
+    "bin/",
     "src/",
     "README.md",
     "LICENSE"
