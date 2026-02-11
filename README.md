@@ -22,9 +22,7 @@ bit status              # show wallet, domain, token & version chain
 cd your-project
 bit init
 
-# 2. Configure your BSV key
-export BOASE_TREASURY_PRIVATE_KEY="your-wif-key"
-
+# 2. Add your BSV private key (WIF) to .env.local
 # 3. Push content to Bitcoin
 bit push
 ```
@@ -105,9 +103,11 @@ bit register example.com --dry-run
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `BOASE_TREASURY_PRIVATE_KEY` | Yes | BSV private key (WIF format) |
+| `BSV_PRIVATE_KEY` | Yes | BSV private key (WIF format) |
 | `NEXT_PUBLIC_SUPABASE_URL` | Optional | Supabase URL for version chain DB |
 | `SUPABASE_SERVICE_ROLE_KEY` | Optional | Supabase service role key |
+
+Configure via `wallet.key_env` in `.bit.yaml` to use any env var name.
 
 ## Lineage
 
