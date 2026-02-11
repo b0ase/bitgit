@@ -72,7 +72,7 @@ Examples:
   bit init
   bit push
   bit push --dry-run
-  bit register kwegwong.com
+  bit register my-domain.com
   bit status
 `);
       break;

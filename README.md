@@ -44,7 +44,7 @@ project:
   token: MYTOKEN
 
 wallet:
-  key_env: BOASE_TREASURY_PRIVATE_KEY
+  key_env: BSV_PRIVATE_KEY
 
 content:
   type: blog              # blog | repo | domain | custom
@@ -77,8 +77,8 @@ Uses the B + MAP + AIP Bitcom protocols:
 ## DNS-DEX Domain Registration
 
 ```bash
-bit register kwegwong.com
-bit register kwegwong.com --category=culture --supply=1000000000
+bit register my-project.com
+bit register my-project.com --category=business --supply=1000000000
 ```
 
 Inscribes a `dnsdex-domain` token on BSV and prints the DNS TXT records to add for verification.
