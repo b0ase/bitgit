@@ -77,19 +77,12 @@ export function resolvePrivateKey(config: BitConfig): string {
     }
   }
 
-  // Fallback chain
-  const fallbacks = [
-    'BOASE_TREASURY_PRIVATE_KEY',
-    'MONEYBUTTON_BSV_ORDINALS_PRIVATE_KEY',
-    'BSV_PRIVATE_KEY',
-  ];
-  for (const envName of fallbacks) {
-    const wif = process.env[envName];
-    if (wif) return wif;
-  }
+  // Fallback: generic env var
+  const wif = process.env.BSV_PRIVATE_KEY;
+  if (wif) return wif;
 
   throw new Error(
-    'No private key found. Set wallet.key_env in .bit.yaml or BOASE_TREASURY_PRIVATE_KEY env var.',
+    'No private key found. Set wallet.key_env in .bit.yaml or BSV_PRIVATE_KEY env var.',
   );
 }
 

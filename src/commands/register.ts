@@ -35,7 +35,6 @@ export async function register(domain: string, args: string[]): Promise<void> {
   let address = '(no key configured)';
   try {
     wif = config ? resolvePrivateKey(config) : (
-      process.env.BOASE_TREASURY_PRIVATE_KEY ||
       process.env.BSV_PRIVATE_KEY ||
       undefined
     );
@@ -46,7 +45,7 @@ export async function register(domain: string, args: string[]): Promise<void> {
   } catch {}
 
   if (!wif && !dryRun) {
-    console.error('No private key found. Set BOASE_TREASURY_PRIVATE_KEY.');
+    console.error('No private key found. Set BSV_PRIVATE_KEY or wallet.key_env in .bit.yaml.');
     process.exit(1);
   }
 

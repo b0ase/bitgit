@@ -70,7 +70,7 @@ export async function init(): Promise<void> {
       ...(token ? { token } : {}),
     },
     wallet: {
-      key_env: 'BOASE_TREASURY_PRIVATE_KEY',
+      key_env: 'BSV_PRIVATE_KEY',
     },
     content: {
       type: contentType,
